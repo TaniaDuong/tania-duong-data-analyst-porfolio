@@ -3,14 +3,96 @@
 <head>
     <meta charset="UTF-8">
     <title>Portfolio Data Analyst - Tania Duong</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background-color: #f6f8fa;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 40px auto;
+            background: white;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+            padding: 32px;
+            border-radius: 8px;
+        }
+        h1 {
+            color: #0366d6;
+            font-size: 2.5em;
+            margin-bottom: 0.2em;
+        }
+        h2 {
+            color: #24292e;
+            margin-top: 2em;
+        }
+        .projects li {
+            margin-bottom: 0.8em;
+        }
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+        .skill {
+            background: #e1e4e8;
+            padding: 6px 16px;
+            border-radius: 16px;
+            font-size: 1em;
+        }
+        a {
+            color: #0366d6;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .contact {
+            margin-top: 2em;
+        }
+    </style>
 </head>
 <body>
-    <h1>Bienvenue sur mon portfolio</h1>
-    <p>Je suis Data Analyst. Voici mes projets et compétences.</p>
-    <ul>
-        <li>Projet 1 : Analyse des ventes</li>
-        <li>Projet 2 : Dashboard interactif</li>
-    </ul>
-    <a href="CV.pdf">Télécharger mon CV</a>
+    <div class="container">
+        <h1>Tania Duong</h1>
+        <p>Bienvenue sur mon portfolio de Data Analyst.<br>
+        Passionnée par la data, l’analyse et la visualisation, je transforme les données en informations stratégiques.</p>
+        
+        <h2>Compétences</h2>
+        <div class="skills">
+            <span class="skill">Python</span>
+            <span class="skill">SQL</span>
+            <span class="skill">Power BI</span>
+            <span class="skill">Tableau</span>
+            <span class="skill">Excel</span>
+            <span class="skill">Statistiques</span>
+            <span class="skill">Machine Learning</span>
+            <span class="skill">Data Visualisation</span>
+        </div>
+        
+        <h2>Projets</h2>
+        <ul class="projects">
+            <li>
+                <strong>Analyse des ventes (Python, Power BI)</strong><br>
+                Dashboard interactif pour suivre les KPI de ventes et identifier les opportunités.
+            </li>
+            <li>
+                <strong>Prévision de la demande (Machine Learning)</strong><br>
+                Modélisation prédictive pour anticiper la demande produit sur 12 mois.
+            </li>
+            <li>
+                <strong>Nettoyage de données (SQL, Excel)</strong><br>
+                Pipeline de traitement et nettoyage de données clients.
+            </li>
+        </ul>
+        
+        <h2>CV & Contact</h2>
+        <div class="contact">
+            <a href="CV.pdf" target="_blank">Télécharger mon CV</a> |
+            <a href="mailto:contact@taniaduong.fr">Me contacter</a> |
+            <a href="https://www.linkedin.com/in/taniaduong/" target="_blank">LinkedIn</a>
+        </div>
+    </div>
 </body>
 </html>
