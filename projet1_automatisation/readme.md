@@ -46,11 +46,12 @@ Afin de fiabiliser la collecte des données et d’éviter les différences de s
 
 
 ## Instructions d’utilisation
-1. Placer tous les fichiers CSV dans le dossier `data/`  
-2. Ouvrir `ReportingTemplate.xlsm` dans Excel  
-3. Activer les macros et lancer la macro principale  
-4. Les données sont automatiquement importées dans Access et consolidées  
-5. Le reporting Excel est généré avec tableaux et graphiques mis à jour  
+1. Utiliser le fichier BL_InputTemplate.xlsm pour générer les csv
+2. Placer tous les fichiers CSV dans le dossier `data/`  
+3. Ouvrir `ReportingTemplate.xlsm` dans Excel  
+4. Activer les macros et lancer la macro principale  
+5. Les données sont automatiquement importées dans Access et consolidées  
+6. Le reporting Excel est généré avec tableaux et graphiques mis à jour  
 
 ## Résultats attendus
 - Reporting consolidé fiable et rapide  
