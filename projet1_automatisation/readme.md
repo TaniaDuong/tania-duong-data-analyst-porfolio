@@ -12,14 +12,14 @@ L’objectif de ce projet est de **fiabiliser et automatiser le processus de con
 - Générer automatiquement un reporting prêt à l’usage pour le management.
 
 ## Processus
-### Ancien processus
+### Ancien processus (Diagramme : `images/Process_Ancien.png`)
 - Collecte manuelle des fichiers Excel des BL  
 - Consolidation Excel manuelle (copier-coller, formules)  
 - Calcul des indicateurs ligne par ligne  
 - Contrôles partiels et manuels  
 - Reporting final exposé aux erreurs et chronophage  
 
-### Nouveau processus
+### Nouveau processus (Diagramme : `images/Process_Nouveau.png`)
 - Import automatisé des fichiers Excel dans une **base Access** via **VBA**  
 - Consolidation centralisée et contrôles de cohérence automatiques  
 - Calcul standardisé des indicateurs clés : NBI, Charges, Résultat, ROI, CIR, Productivité  
