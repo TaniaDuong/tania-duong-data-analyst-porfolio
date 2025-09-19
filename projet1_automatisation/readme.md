@@ -34,7 +34,28 @@ L’objectif de ce projet est de **fiabiliser et automatiser le processus de con
 ## Données (dataset)
 - `NBI_BLX.csv` : Revenus par produit, desk et région  
 - `Payroll_BLX.csv` : Masse salariale et effectifs par département et rôle  
-- `FraisGeneraux_BLX.csv` : Charges opérationnelles par type et centre de coût  
+- `FraisGeneraux_BLX.csv` : Charges opérationnelles par type et centre de coût
+
+## Contrôles de qualité des données
+
+Avant l’importation dans Access, une série de contrôles automatiques sont effectués pour garantir la fiabilité des données fournies par les Business Lines :
+
+### 1. Contrôles de structure
+- Vérification de la présence des 3 feuilles obligatoires (`NBI`, `Payroll`, `FraisGeneraux`)
+- Vérification des colonnes attendues (par ex. : `Produit`, `Revenu`, `Date`)
+- Validation des formats (dates, numériques)
+
+### 2. Contrôles de contenu
+- Détection des cellules vides dans les champs critiques
+- Vérification des valeurs interdites (ex. FTE négatif)
+- Validation de la période déclarée (pas de données futures)
+
+### 3. Contrôles de cohérence
+- Comparaison avec M-1 et N-1 (écarts significatifs signalés)
+- Vérification des totaux et des agrégats
+- Contrôles croisés (masse salariale cohérente avec le nombre de FTE)
+
+En cas d’anomalie, un **rapport d’erreurs est généré automatiquement** (`docs/Exemple_ErrorsReport.png`) et transmis au contrôleur de gestion concerné pour correction.
 
 ## Instructions d’utilisation
 1. Placer tous les fichiers CSV dans le dossier `data/`  
