@@ -40,34 +40,10 @@ L’objectif de ce projet est de **fiabiliser et automatiser le processus de con
 
 ## Solution technique
 
-### 1. Standardisation des fichiers Business Line
+### 1. Standardisation et contrôle des fichiers Business Line
 
-Afin de fiabiliser la collecte des données et d’éviter les différences de structure entre les fichiers envoyés par les Business Lines, un **fichier Excel standardisé (BL_InputTemplate.xlsm)** a été créé.
-- Une feuille d’accueil permet au contrôleur de gestion de sélectionner :
-  - La **Business Line** dans une liste déroulante
-  - Le **mois/année** dans une liste déroulante
-  - Un bouton **“Générer les CSV”** déclenche l’export automatique
-- Les autres feuilles (`NBI_calc`, `Payroll_calc`, `FraisGeneraux_calc`) sont libres et servent aux contrôleurs pour leurs calculs habituels
-- Trois feuilles dédiées (`NBI_export`, `Payroll_export`, `FraisGeneraux_export`) sont **structurées et standardisées** pour l’export
-- La macro **ExportCSV_BL.bas** génère automatiquement les fichiers CSV conformes (nommage : `BLx_NBI_YYYYMM.csv`, etc.)
-👉 Cette approche sépare clairement la **zone de calcul (libre)** de la **zone d’export (contrôlée)**, garantissant une collecte homogène et réduisant les erreurs.
+Afin de fiabiliser la collecte des données et d’éviter les différences de structure entre les fichiers envoyés par les Business Lines, un **fichier Excel standardisé (BL_InputTemplate.xlsm)** a été créé. Une **feuille d’accueil** permet de sélectionner la Business Line et la période, et un bouton déclenche la macro qui **nettoie automatiquement** des feuilles export, applique **tous les contrôles de structure et de contenu** (validation des produits, catégories, devises, chiffres non nuls, formats corrects) et **génère** les fichiers CSV conformes au format attendu pour l’import dans Access. 
 
-### 2. Contrôles de qualité des données
-
-Avant l’importation dans Access, une série de contrôles automatiques sont effectués pour garantir la fiabilité des données fournies par les Business Lines :
-#### 1. Contrôles de structure
-- Vérification de la présence des 3 feuilles obligatoires (`NBI`, `Payroll`, `FraisGeneraux`)
-- Vérification des colonnes attendues (par ex. : `Produit`, `Revenu`, `Date`)
-- Validation des formats (dates, numériques)
-#### 2. Contrôles de contenu
-- Détection des cellules vides dans les champs critiques
-- Vérification des valeurs interdites (ex. FTE négatif)
-- Validation de la période déclarée (pas de données futures)
-#### 3. Contrôles de cohérence
-- Comparaison avec M-1 et N-1 (écarts significatifs signalés)
-- Vérification des totaux et des agrégats
-- Contrôles croisés (masse salariale cohérente avec le nombre de FTE)
-👉 En cas d’anomalie, un **rapport d’erreurs est généré automatiquement** (`docs/Exemple_ErrorsReport.png`) et transmis au contrôleur de gestion concerné pour correction.
 
 ## Instructions d’utilisation
 1. Placer tous les fichiers CSV dans le dossier `data/`  
