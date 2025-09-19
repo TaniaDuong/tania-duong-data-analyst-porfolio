@@ -35,6 +35,7 @@ L’objectif de ce projet est de **fiabiliser et automatiser le processus de con
 - `NBI_BLX.csv` : Revenus par produit, desk et région  
 - `Payroll_BLX.csv` : Masse salariale et effectifs par département et rôle  
 - `FraisGeneraux_BLX.csv` : Charges opérationnelles par type et centre de coût
+
 👉 Certains fichiers de test contiennent volontairement des erreurs de structure ou de contenu (colonnes manquantes, valeurs incohérentes, périodes invalides) afin d’illustrer le fonctionnement des **contrôles automatiques** et la génération du rapport d’erreurs.
 
 ## Solution technique
