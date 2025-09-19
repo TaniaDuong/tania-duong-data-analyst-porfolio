@@ -30,6 +30,7 @@ L’objectif de ce projet est de **fiabiliser et automatiser le processus de con
 - **Excel VBA** : automatisation, calculs, génération de reporting et graphiques  
 - **Access** : centralisation et fiabilité des données  
 - **CSV** : format standard pour l’import des fichiers Business Lines  
+👉 Certains fichiers de test contiennent volontairement des erreurs de structure ou de contenu (colonnes manquantes, valeurs incohérentes, périodes invalides) afin d’illustrer le fonctionnement des **contrôles automatiques** et la génération du rapport d’erreurs.
 
 ## Données (dataset)
 - `NBI_BLX.csv` : Revenus par produit, desk et région  
