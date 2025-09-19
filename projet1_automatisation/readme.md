@@ -40,7 +40,7 @@ L’objectif de ce projet est de **fiabiliser et automatiser le processus de con
 
 ## Solution technique
 
-### Standardisation des fichiers Business Line
+### 1. Standardisation des fichiers Business Line
 
 Afin de fiabiliser la collecte des données et d’éviter les différences de structure entre les fichiers envoyés par les Business Lines, un **fichier Excel standardisé (BL_InputTemplate.xlsm)** a été créé.
 - Une feuille d’accueil permet au contrôleur de gestion de sélectionner :
@@ -52,7 +52,7 @@ Afin de fiabiliser la collecte des données et d’éviter les différences de s
 - La macro **ExportCSV_BL.bas** génère automatiquement les fichiers CSV conformes (nommage : `BLx_NBI_YYYYMM.csv`, etc.)
 👉 Cette approche sépare clairement la **zone de calcul (libre)** de la **zone d’export (contrôlée)**, garantissant une collecte homogène et réduisant les erreurs.
 
-### Contrôles de qualité des données
+### 2. Contrôles de qualité des données
 
 Avant l’importation dans Access, une série de contrôles automatiques sont effectués pour garantir la fiabilité des données fournies par les Business Lines :
 #### 1. Contrôles de structure
